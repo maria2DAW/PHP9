@@ -52,7 +52,7 @@ and open the template in the editor.
             dameNombre();
             
             echo $nombre;
-            echo " ";
+            echo "<br />";
             echo $name;
             
         ?>
