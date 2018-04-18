@@ -6,8 +6,9 @@ and open the template in the editor.
 -->
 <html lang="es">
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <meta charset="UTF-8" />
+        <title>Conceptos PHP</title>
+        <link rel="stylesheet" href="css/estilos.css"/>
     </head>
     <body>
         <h1>Ámbitos de las variables</h1>
@@ -83,6 +84,56 @@ and open the template in the editor.
         incrementarVariable();
         incrementarVariable();
         incrementarVariable();
+        
+        ?>
+        
+        <h1>Comparación de strings</h1>
+        
+        <?php
+        
+        echo "<p class=\"resaltar\" >Ejemplo de frase</p>";
+        
+        //Dos formas de comparar cadenas en PHP
+        //-strcmp (string compare) --> Compara valores de tipo string teniendo en cuenta mayúsculas y minúsculas
+        //-strcasecmp --> Compara valores de tipo string ignorando mayúsculas y minúsculas
+        
+        $variable1 = "casa";
+        
+        $variable2 = "CASA";
+        
+        $resultado = strcmp($variable2, $variable1);  //Devuelve -1 si no son iguales y 0 si son iguales.
+        //En este caso debería devolver -1 porque no son dos cadenas iguales.
+        
+        echo "El resultado es ".$resultado;
+        
+        $resultado2 = strcasecmp($variable2, $variable1);
+        
+        echo "<br />El resultado es ".$resultado2;
+        echo "<br />";
+        echo "<br />";
+        
+        if($resultado)
+        {
+            echo "No coinciden";
+        }
+        
+        else
+        {
+            echo "Coinciden";
+        }
+        
+        echo "<br />";
+        echo "<br />";
+        
+        if($resultado2)
+        {
+            echo "No coinciden";
+        }
+        
+        else
+        {
+            echo "Coinciden";
+        }
         
         ?>
     </body>
