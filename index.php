@@ -136,5 +136,37 @@ and open the template in the editor.
         }
         
         ?>
+        
+        <h1>Constantes</h1>
+        
+       <?php
+       
+       //Para declarar constantes:       
+       //define("NOMBRE_CONSTANTE", valor, [bool $case_insensitive = false]); 
+       //El tercer parámetro es opcional y nos permite establecer el nombre de la constante en minúsculas.
+       
+       /*-El nombre de una constante debe ir en mayúscula (convenio)
+         -No deben llevar el símbolo "$"
+        *-El obligatorio el uso de la función "define()" para definir constantes 
+        *-El ámbito de las constantes es global por defecto
+        *-No se pueden redefinir
+        *-Sólo pueden almacenar valores escalares (valores que no se pueden dividir 
+        * en partes más pequeñas --> enteros, decimales, cadenas, booleanos. Un array no 
+        * sería un valor escalar, ya que está compuesto de otros valores, por lo tanto, 
+        * las constantes no pueden almacenar arrays. )  /
+        */
+       
+       define("AUTOR", "María");
+       
+       echo "El autor es ".AUTOR;
+       
+       //CONSTANTES PREDEFINIDAS:
+       
+       echo "<br /><br />";
+       
+       echo "La línea de esta instrucción es: ".__LINE__."<br />";
+       echo "Estamos trabajando con este fichero: ".__FILE__;
+       
+       ?>
     </body>
 </html>
