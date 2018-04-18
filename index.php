@@ -10,6 +10,8 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        <h1>Ámbitos de las variables</h1>
+        
         <?php
         
         /*En PHP hay dos ámbitos muy diferenciados:
@@ -55,6 +57,33 @@ and open the template in the editor.
             echo "<br />";
             echo $name;
             
+        ?>
+        
+        <h1>Variables estáticas</h1>
+        
+        <?php
+        
+        function incrementarVariable()
+        {
+            //Para crear variables estáticas:
+            static $contador = 0;
+            $contador++;
+            
+            echo $contador."<br />";
+            
+            //Con esto se consigue:
+            //  1- La línea donde hemos declarado la variable estática se ejecuta 
+            //  sólamente la primera vez que se llama a la función
+            
+            //  2- Cuando la función finaliza el valor de la variable se conserva
+        }
+        
+        incrementarVariable();
+        incrementarVariable();
+        incrementarVariable();
+        incrementarVariable();
+        incrementarVariable();
+        
         ?>
     </body>
 </html>
